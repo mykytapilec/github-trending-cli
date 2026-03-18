@@ -14,8 +14,6 @@ export function getDateFromDuration(duration: string): string {
     case 'year':
       now.setFullYear(now.getFullYear() - 1);
       break;
-    default:
-      throw new Error('Invalid duration. Use day, week, month, or year.');
   }
 
   return now.toISOString().split('T')[0];
